@@ -79,6 +79,14 @@
       "name": "Marcia Pittman",
       "company": "MANUFACT",
       "email": "marciapittman@manufact.com"
+    },
+    {
+      "id": "5dc9bdc65720bf0a00dc0ca4",
+      "isActive": false,
+      "age": 39,
+      "name": "Rosanna Newman",
+      "company": "EXIAND",
+      "email": "rosannanewman@exiand.com"
     }
   ]
 }

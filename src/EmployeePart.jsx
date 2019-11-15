@@ -11,7 +11,7 @@ class EmployeePart extends React.Component {
             age : undefined,
             company : undefined,
             email: undefined,
-            isActive : true,
+            isActive : undefined,
             addEmployee : false,
             isSaving: false,
             deletingId : 0
@@ -41,7 +41,7 @@ class EmployeePart extends React.Component {
             <>
                 {this.state.data == null && <label> Loading ... </label> }
                 <div>
-                    <button onClick={this.handleAddEmployee}> Add new employee </button>
+                    <button style={style} onClick={this.handleAddEmployee}> Add new employee </button>
                 </div>
 
                 {this.state.addEmployee &&
@@ -70,6 +70,7 @@ class EmployeePart extends React.Component {
                             <th>Name</th>
                             <th>Age</th>
                             <th>Company</th>
+                            <th>Email</th>
                             <th>Is active</th>
                             <th>Delete</th>
                         </tr>
@@ -82,6 +83,7 @@ class EmployeePart extends React.Component {
                                      <td> {employee.name} </td>
                                      <td> {employee.age} </td>
                                      <td> {employee.company} </td>
+                                     <td> {employee.email} </td>
                                      <td> {employee.isActive ? "true" : "false"} </td>
                                      <td onClick={() => this.handleDeleteEmployee(employee.id)}> x </td>
                                  </> }
@@ -89,10 +91,6 @@ class EmployeePart extends React.Component {
                                  {employee.id === this.state.deletingId &&
                                  <>
                                      <td> Deleting row </td>
-                                     <td> </td>
-                                     <td> </td>
-                                     <td> </td>
-                                     <td> </td>
                                  </> }
                              </tr>)
                          }

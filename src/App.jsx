@@ -3,7 +3,7 @@ import EmployeePart from "./EmployeePart";
 
 const App = () => (
     <>
-        <h1>Database of employees</h1>
+        <h1 style={{ textAlign: "center" }}>Database of employees</h1>
         <EmployeePart/>
     </>
 )
