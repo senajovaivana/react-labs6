@@ -11,7 +11,9 @@ const NewEmployee  = ({
                               onChangeAge,
                               onChangeCompany,
                               onChangeEmail,
-                              onChangeIsActive
+                              onChangeIsActive,
+                              errors,
+                              isReadyToSubmit
                           }) => {
 
 
@@ -36,8 +38,13 @@ const NewEmployee  = ({
             </select>
 
             <div style={ {padding : 10}}>
-                <button onClick={onClickSubmit}> Submit </button>
+                <button disabled={!isReadyToSubmit} onClick={onClickSubmit}> Submit </button>
             </div>
+            {errors.size !== 0 &&
+            <div className={'redColor'}>
+                {errors.map(e => <div key={e}> {e} </div>)}
+            </div>
+            }
         </>
     );
 
