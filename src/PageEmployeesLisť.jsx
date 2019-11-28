@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 class EmployeePart extends React.Component {
     constructor(props) {
         super(props);
@@ -7,7 +7,6 @@ class EmployeePart extends React.Component {
         this.state = {
             data : undefined,
             deletingId : 0
-
         };
         this.handleDeleteEmployee = this.handleDeleteEmployee.bind(this);
     }
@@ -61,6 +60,7 @@ class EmployeePart extends React.Component {
                     </tbody>
                 </table>
                 }
+                <Link to="/new">Create new employee</Link>
             </>
         );
 
