@@ -1,10 +1,11 @@
 import React from 'react'
-import EmployeePart from "./EmployeePart";
+import PageEmployee from "./PageEmployee";
+import PageEmployeesList from "./PageEmployeesLisť";
 
 const App = () => (
     <>
-        <h1 style={{ textAlign: "center" }}>Database of employees</h1>
-        <EmployeePart/>
+        <PageEmployeesList/>
+        <PageEmployee/>
     </>
 )
 
